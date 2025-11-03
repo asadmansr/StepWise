@@ -1,4 +1,4 @@
-package com.asadmansr.stepwise.components.home
+package com.asadmansr.stepwise.ui.component.home
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
@@ -38,7 +38,9 @@ import com.asadmansr.stepwise.ui.theme.Graphite
 import com.asadmansr.stepwise.ui.theme.White
 
 @Composable
-fun AddStep() {
+fun AddStep(
+    onStepAdd: (step: Int) -> Unit = {}
+) {
     val focusRequester = remember { FocusRequester() }
     val stepText = rememberTextFieldState()
 
@@ -89,7 +91,9 @@ fun AddStep() {
                     contentColor = White
                 ),
                 shape = RoundedCornerShape(8.dp),
-                onClick = { }
+                onClick = {
+                    onStepAdd(stepText.text.toString().toInt())
+                }
             ) {
                 Icon(
                     imageVector = Icons.Rounded.Check,

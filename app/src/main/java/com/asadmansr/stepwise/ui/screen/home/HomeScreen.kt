@@ -1,4 +1,4 @@
-package com.asadmansr.stepwise.components.home
+package com.asadmansr.stepwise.ui.screen.home
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -19,6 +19,12 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
+import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.asadmansr.stepwise.data.model.HomeScreenEvent
+import com.asadmansr.stepwise.ui.component.home.AddStep
+import com.asadmansr.stepwise.ui.component.home.HomeScreenBanner
+import com.asadmansr.stepwise.ui.component.home.HomeScreenHeader
 import com.asadmansr.stepwise.ui.theme.Graphite
 import com.asadmansr.stepwise.ui.theme.LightViolet
 import com.asadmansr.stepwise.ui.theme.OrangeBackground
@@ -26,6 +32,7 @@ import com.asadmansr.stepwise.ui.theme.PinkBackground
 
 @Composable
 fun HomeScreen(
+    homeViewModel: HomeViewModel = hiltViewModel(),
     onSettingsTapped: () -> Unit = {}
 ) {
     var isAddStepToggled by rememberSaveable { mutableStateOf(false) }
@@ -57,7 +64,7 @@ fun HomeScreen(
                             listOf(OrangeBackground, PinkBackground)
                         )
                     )
-                    .clickable{
+                    .clickable {
                         isAddStepToggled = false
                     }
                     .padding(innerPadding)
@@ -72,10 +79,13 @@ fun HomeScreen(
                         .align(Alignment.BottomCenter)
                         .padding(bottom = innerPadding.calculateBottomPadding())
                 ) {
-                    AddStep()
+                    AddStep(
+                        onStepAdd = {
+                            homeViewModel.handleEvent(HomeScreenEvent.OnAddStep(it))
+                        }
+                    )
                 }
             }
         }
-
     }
 }

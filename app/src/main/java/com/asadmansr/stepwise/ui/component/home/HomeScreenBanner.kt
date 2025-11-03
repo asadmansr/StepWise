@@ -1,4 +1,4 @@
-package com.asadmansr.stepwise.components.home
+package com.asadmansr.stepwise.ui.component.home
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
@@ -16,8 +16,6 @@ import androidx.compose.ui.unit.sp
 import com.asadmansr.stepwise.ui.theme.DarkGray
 import com.asadmansr.stepwise.ui.theme.DeepPink
 import com.asadmansr.stepwise.ui.theme.FredokaFontFamily
-import com.asadmansr.stepwise.ui.theme.OrangeBackground
-import com.asadmansr.stepwise.ui.theme.PinkBackground
 import com.asadmansr.stepwise.ui.theme.White
 
 @Composable

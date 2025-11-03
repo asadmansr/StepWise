@@ -1,4 +1,4 @@
-package com.asadmansr.stepwise.components.settings
+package com.asadmansr.stepwise.ui.component.settings
 
 import androidx.compose.runtime.Composable
 

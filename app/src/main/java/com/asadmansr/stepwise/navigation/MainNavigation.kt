@@ -5,8 +5,8 @@ import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.remember
 import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.ui.NavDisplay
-import com.asadmansr.stepwise.components.home.HomeScreen
-import com.asadmansr.stepwise.components.settings.SettingScreen
+import com.asadmansr.stepwise.ui.screen.home.HomeScreen
+import com.asadmansr.stepwise.ui.component.settings.SettingScreen
 
 
 @Composable

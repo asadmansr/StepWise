@@ -1,4 +1,4 @@
-package com.asadmansr.stepwise.components.home
+package com.asadmansr.stepwise.ui.component.home
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
