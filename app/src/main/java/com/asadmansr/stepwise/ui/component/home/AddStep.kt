@@ -39,7 +39,7 @@ import com.asadmansr.stepwise.ui.theme.White
 
 @Composable
 fun AddStep(
-    onStepAdd: (step: Int) -> Unit = {}
+    onStepAdd: (step: Int) -> Unit
 ) {
     val focusRequester = remember { FocusRequester() }
     val stepText = rememberTextFieldState()

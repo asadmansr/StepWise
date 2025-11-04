@@ -19,6 +19,7 @@ val Black = Color(0xFF000000)
 val Violet = Color(0xFFFF3CAC)
 val LightViolet = Color(0xFFD6C9E2)
 val Graphite = Color(0xFF251607)
+val SkyBlue = Color(0xFF45B8F7)
 
 val MintGreen = Color(0xFF81FBB8)
 val TealGreen = Color(0xFF00C896)
